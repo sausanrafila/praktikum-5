@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <style>
+        body {
+            background-color:pink;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+        fieldset{
+            margin-left: 40%;
+            width: 20%;
+            height: 500px;
+            background-color: thistle;
+            border-radius: 1em;
+        }
+        .input {
+            margin-left: 40%;
+            width: 18%;
+            border-radius: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>chat</h1>
+    <fieldset>
+        <div class="message"></div>
+    </fieldset>
+
+    <input type="text" class="input" value="" />
+    <button class="btn">send</button>
+
+
+<script>
+    let message = document.querySelector(".message");
+    const input = document.querySelector(".input");
+    const btn = document.querySelector(".btn");
+
+    btn.addEventListener("click",function(){
+        message.innerHTML = message.innerHTML + "<br>" + input.value;
+        input.value = "";
+    });
+</script>
+
+</body>
+</html>
